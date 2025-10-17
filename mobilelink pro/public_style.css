@@ -1,0 +1,91 @@
+/* Add these styles to the end of public_style.css */
+
+/* Cart Icon */
+.cart-icon-wrapper {
+    position: relative;
+    margin-left: 1.5rem;
+    cursor: pointer;
+}
+.cart-icon-wrapper i {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+#cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 2rem;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    position: relative;
+}
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close-button:hover {
+    color: black;
+}
+#cart-items-container .cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+#cart-total {
+    text-align: right;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+#checkout-btn {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* Checkout Form */
+#checkout-form label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+#checkout-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#checkout-form button {
+    width: 100%;
+    margin-top: 1.5rem;
+}

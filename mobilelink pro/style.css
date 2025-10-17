@@ -1,0 +1,218 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #3B82F6;
+    --secondary-color: #1F2937;
+    --background-color: #F3F4F6;
+    --text-color: #374151;
+    --card-bg: #FFFFFF;
+    --alert-color: #EF4444;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: var(--secondary-color);
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: fixed;
+}
+
+.sidebar-header {
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    border-bottom: 1px solid #3d434d;
+}
+
+.sidebar nav a {
+    display: block;
+    padding: 15px 20px;
+    color: #D1D5DB;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar nav a i {
+    margin-right: 15px;
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar nav a:hover, .sidebar nav a.active {
+    background-color: var(--primary-color);
+    color: #FFF;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    margin-left: 250px; /* Same as sidebar width */
+    padding: 2rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    font-size: 2rem;
+}
+
+/* KPI Cards */
+.kpi-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.card.alert .card-icon {
+    color: var(--alert-color);
+}
+
+.card-info p {
+    color: #6B7280;
+    font-size: 0.9rem;
+}
+
+.card-info h3 {
+    font-size: 1.75rem;
+    color: var(--secondary-color);
+}
+
+/* Dashboard Main Section (Chart & Activity) */
+.dashboard-main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.chart-container, .recent-activity, .low-stock-section {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.chart-container {
+    height: 400px;
+}
+
+h3 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--background-color);
+}
+
+table th {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.stock-alert {
+    color: var(--alert-color);
+    font-weight: 700;
+    background-color: #FEE2E2;
+    padding: 2px 8px;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .dashboard-main {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+    .main-content {
+        margin-left: 0;
+    }
+}/* Add to your style.css */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #FFF;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.btn-primary:hover {
+    background-color: #2563EB;
+}
+.content-table {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.actions a {
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+    color: #FFF;
+}
+.btn-edit { background-color: #FBBF24; }
+.btn-delete { background-color: var(--alert-color); }
+/* Add to your style.css */
+.btn-view { background-color: #10B981; } /* A green color */
